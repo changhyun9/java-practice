@@ -2,6 +2,7 @@ package domain;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Set;
 
 public class Sentence {
     private Map<Integer, String> sentence;
@@ -28,6 +29,10 @@ public class Sentence {
 
     public void editSentence(String words, int index){
         sentence.put(index, words);
+    }
+
+    public Set<Integer> getAllSentence(){
+        return sentence.keySet();
     }
 
 }
