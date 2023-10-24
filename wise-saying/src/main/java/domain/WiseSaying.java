@@ -29,9 +29,22 @@ public class WiseSaying {
     }
 
     public void removeWiseSaying(int index) {
-        sentence.remove(index);
-        sentence.remove(index);
-        System.out.println(index +"번 명언이 삭제되었습니다.");
+        boolean existIndex = validateIndex(index);
+        if(existIndex){
+            sentence.remove(index);
+            sentence.remove(index);
+            System.out.println(index +"번 명언이 삭제되었습니다.");
+        }
+        if(!existIndex){
+            System.out.println(index + "번 명언은 존재하지 않습니다.");
+        }
+    }
+
+    private boolean validateIndex(int index){
+        if(sentence.containsKey(index)){
+            return true;
+        }
+        return false;
     }
 
 
