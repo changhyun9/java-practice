@@ -15,13 +15,7 @@ public class Main {
             System.out.print("명령) ");
             input = bf.readLine();
             if (input.equals("등록")) {
-                System.out.print("명언) ");
-                String words = bf.readLine();
-
-                System.out.print("작가) ");
-                String person = bf.readLine();
-
-                wiseSaying.insertObject(words, person);
+                wiseSaying.insertObject();
             }
             if(input.equals("목록")){
                 wiseSaying.printWiseSaying();
@@ -29,6 +23,10 @@ public class Main {
             if (input.contains("삭제")) {
                 int index = input.charAt(input.length()-1) - '0';
                 wiseSaying.removeWiseSaying(index);
+            }
+            if (input.contains("수정")) {
+                int index = input.charAt(input.length()-1) - '0';
+                wiseSaying.editWiseSaying(index);
             }
         }
     }
