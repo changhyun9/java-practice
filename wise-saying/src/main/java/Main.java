@@ -7,6 +7,7 @@ public class Main {
         System.out.println("== 명언 앱 ==");
         BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
         String input = "";
+        int count = 0;
 
         while (!input.equals("종료")) {
             System.out.print("명령) ");
@@ -16,7 +17,8 @@ public class Main {
                 String wiseSaying = bf.readLine();
                 System.out.print("작가 : ");
                 String writer = bf.readLine();
-                System.out.println("1번 명언이 등록되었습니다.");
+                count++;
+                System.out.println(count + "번 명언이 등록되었습니다.");
             }
         }
     }
