@@ -11,7 +11,13 @@ public class Main {
         while (!input.equals("종료")) {
             System.out.print("명령) ");
             input = bf.readLine();
-
+            if (input.equals("등록")) {
+                System.out.print("명언 : ");
+                String wiseSaying = bf.readLine();
+                System.out.print("작가 : ");
+                String writer = bf.readLine();
+                System.out.println("1번 명언이 등록되었습니다.");
+            }
         }
     }
 }
