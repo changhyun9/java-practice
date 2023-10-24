@@ -4,10 +4,10 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 
 public class Main {
+    static BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
 
     public static void main(String[] args) throws IOException {
         System.out.println("== 명언 앱 ==");
-        BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
         String input = "";
         WiseSaying wiseSaying = new WiseSaying();
 
@@ -15,10 +15,20 @@ public class Main {
             System.out.print("명령) ");
             input = bf.readLine();
             if (input.equals("등록")) {
-                wiseSaying.enterObject(bf);
+                System.out.print("명언) ");
+                String words = bf.readLine();
+
+                System.out.print("작가) ");
+                String person = bf.readLine();
+
+                wiseSaying.insertObject(words, person);
             }
             if(input.equals("목록")){
                 wiseSaying.printWiseSaying();
+            }
+            if (input.contains("삭제")) {
+                int index = input.charAt(input.length()-1) - '0';
+                wiseSaying.removeWiseSaying(index);
             }
         }
     }
