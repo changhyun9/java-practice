@@ -18,8 +18,8 @@ public class Application {
 
     public static void main(String[] args) throws IOException {
 
-        String txtFilePath = "/Users/munchanghyeon/Desktop/javaProject/practice2/practice2/file/test.txt";
-        String jsonFilePath = "/Users/munchanghyeon/Desktop/javaProject/practice2/practice2/file/data.json";
+        String txtFilePath = "/Users/munchanghyeon/Desktop/javaProject/practice/practice2/file/test.txt";
+        String jsonFilePath = "/Users/munchanghyeon/Desktop/javaProject/practice/practice2/file/data.json";
         File txtFile = new File(txtFilePath);
         File jsonFile = new File(jsonFilePath);
         FileWriter fileWriter = new FileWriter(jsonFile);
